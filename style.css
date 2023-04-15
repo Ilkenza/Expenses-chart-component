@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    background-color: hsl(27, 66%, 92%);
+}
+h1,h2,h3,h4{margin: 0;}
+.all{
+    display: flex;
+    flex-direction: column;
+}
+main{
+    margin: auto;
+    height: 100vh;
+    max-width: 30rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+}
+.header{
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+.card{
+    width: 100%;
+}
+.mb h2,.mb h4{color: #fff;}
+.mb h4{
+    margin-bottom: .5rem;
+    font-weight: 400;
+}
+.mb h2{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.main{
+    background-color: hsl(33, 100%, 98%);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+.main h2{
+    color: hsl(25, 47%, 15%);
+    font-weight: 700;
+    font-size: 2rem;
+}
+.all-chart{
+    display: flex;
+    justify-content: space-between;
+}
+.chart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 15rem;
+    position: relative;
+    margin-right: .5rem;
+}
+.chart p{
+    color: hsl(28, 10%, 53%);
+    margin-top: .5rem;
+    margin: 0;
+}
+.char{
+    width: 3rem;
+    border-radius: .3rem;
+    background-color: hsl(10, 79%, 65%);
+    max-height: 20rem;
+    position: relative;
+}
+.char:hover{
+    opacity: .5;
+    cursor: pointer;
+}
+.char::before{
+    opacity: 1;
+}
+.char:hover::before{
+    content: attr(data-chartAmount);
+    background:hsl(25, 47%, 15%);
+    position: absolute;
+    width: 4rem;
+    height: 2rem;
+    border-radius: .3rem;
+    top: -2.3rem;
+    right: -0.5rem;
+    opacity: 1;
+    color: hsl(33, 100%, 98%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#chart1{height: 3rem;}
+#chart2{height: 6rem;}
+#chart3{height: 9rem;background: hsl(186, 34%, 60%);}
+#chart4{height: 5.5rem;}
+#chart5{height: 4rem;}
+#chart6{height: 7.5rem;}
+#chart7{height: 4.5rem;}
+hr{
+    border: 1px solid hsl(27, 66%, 92%);
+    margin: 2rem 0rem;
+}
+.tot{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.tottm h4{
+    color: hsl(28, 10%, 53%);
+    font-weight: 400;
+}
+.tottm h1{
+    color: hsl(25, 47%, 15%);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.totlm{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.totlm h4:first-of-type{
+    color: hsl(25, 47%, 15%);
+    font-weight: 700;
+}
+.totlm h4:last-of-type{
+    color: hsl(28, 10%, 53%);
+    font-weight: 400;
+}
+.attribution { 
+    font-size: 1.2rem; 
+    text-align: center;
+    margin-top: 2rem; 
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media all and (max-width:500px){
+    .mb h2{font-size: 1.5rem;}
+    .mb h4{font-size: .8rem;}
+    .main{padding: 1rem;}
+    .main h2{font-size: 1.5rem;}
+    .chart{width: 100%;}
+    .char{width: 100%;}
+    .tottm h1{font-size: 2rem;}
+    .tottm h4{font-size: .8rem;}
+    .totlm h4{font-size: .8rem;}
+}
